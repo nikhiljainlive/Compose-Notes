@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Compose Notes</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="re_enter_password">Re-enter Password</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="login_to_jetpack_compose">Login to Compose Notes</string>
+    <string name="sign_in">Sign in</string>
+    <string name="register_here">Register here</string>
+    <string name="powered_by_jetpack_compose" translatable="false">Powered By JetPack Compose</string>
+    <string name="new_to_notes">New to Notes?</string>
+</resources>
