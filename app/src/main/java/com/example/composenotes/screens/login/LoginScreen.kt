@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
@@ -28,13 +27,15 @@ import com.example.composenotes.R
 import com.example.composenotes.utils.HexToJetpackColor
 
 @Composable
-fun LoginScreen(onRegisterClicked: () -> Unit) {
+fun LoginScreen(
+    onRegisterClicked: () -> Unit,
+    onLoginSuccessful: () -> Unit
+) {
     Box(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
     ) {
-        val context = LocalContext.current
         var email by remember { mutableStateOf("") }
         var password by remember { mutableStateOf("") }
         Column(
@@ -105,8 +106,9 @@ fun LoginScreen(onRegisterClicked: () -> Unit) {
                     Spacer(modifier = Modifier.height(16.dp))
                     Button(onClick = {
                         // TODO :: Log in
+                        onLoginSuccessful()
                     }) {
-                        Text(text = stringResource(R.string.sign_in))
+                        Text(text = stringResource(R.string.login))
                     }
                     Spacer(modifier = Modifier.height(24.dp))
                     Row {
@@ -123,7 +125,6 @@ fun LoginScreen(onRegisterClicked: () -> Unit) {
                 }
             }
         }
-
     }
 }
 
@@ -131,5 +132,5 @@ fun LoginScreen(onRegisterClicked: () -> Unit) {
 @Preview
 @Composable
 fun LoginScreen_Previews() {
-    LoginScreen {}
+    LoginScreen({}, {})
 }

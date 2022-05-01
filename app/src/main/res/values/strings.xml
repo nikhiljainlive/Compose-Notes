@@ -7,8 +7,15 @@
     <string name="re_enter_password">Re-enter Password</string>
     <string name="welcome_back">Welcome back!</string>
     <string name="login_to_jetpack_compose">Login to Compose Notes</string>
-    <string name="sign_in">Sign in</string>
+    <string name="login">Login</string>
     <string name="register_here">Register here</string>
     <string name="powered_by_jetpack_compose" translatable="false">Powered By JetPack Compose</string>
     <string name="new_to_notes">New to Notes?</string>
+    <string name="notes">Notes</string>
+    <string name="reminders">Reminders</string>
+    <string name="archive">Archive</string>
+    <string name="deleted">Deleted</string>
+    <string name="home">Home</string>
+    <string name="pinned">Pinned</string>
+    <string name="others">Others</string>
 </resources>
